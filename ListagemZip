@@ -1,0 +1,16 @@
+package jm.zipper;
+import java.io.*;
+import java.util.zip.*;
+
+public class ListagemZip{
+  public static void main(String[] args){
+    String arquivo = "c:/teste.zip";
+    ZipFile zip = new ZipFile( arquivo );
+    Emuneration e = Zip.entries();
+    while( e.hasMoreElements() ){
+      ZipEntry entrada = (ZipEntry) e.nextElement();
+      System.out.println( entrada.getName() );
+    }
+    zi.close();
+  }
+}
