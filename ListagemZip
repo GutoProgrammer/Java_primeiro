@@ -5,6 +5,10 @@ import java.util.zip.*;
 public class ListagemZip{
   public static void main(String[] args){
     String arquivo = "c:/teste.zip";
+    
+    /*As entradas do Zip são recuperadas com o método entries() de ZipFile, 
+    que retorna um java.util.Enumeration permitindo navegar por uma coleção de objetos ZipEntry.*/
+    
     ZipFile zip = new ZipFile( arquivo );
     Emuneration e = Zip.entries();
     while( e.hasMoreElements() ){
